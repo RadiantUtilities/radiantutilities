@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radiant Utilities</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="Server-modified.png" type="image/x-icon">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+                <img src="Server-modified.png" alt="HTML tutorial" class="logo">
+                <a href="file:///C:/Users/Olle/Desktop/Website/index.html">
+                </a>
+                <div class="navbar">
+                    <a href="file:///C:/Users/Olle/Desktop/Website/index.html">
+                    </a>
+                    <ul>
+                        <li><a href="index.html" class="disabled-link">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://discord.com/api/oauth2/authorize?client_id=1047558473065447424&permissions=8&scope=bot%20applications.commands" target="_blank">Invite</a></li>
+                        <li><a href="https://discord.gg/vfE9qb8V9f" target="_blank">Discord Server</a></li>
+                    </ul>
+                </div>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="home">
+            <div class="banner">
+
+                <div class="content">
+                    <h1>Radiant Utilities</h1>
+                    <p>Radiant Utilities is a fun Discord bot that provides an<br>array of tools
+                        to engage members and enhance the Radiant Valorant community. </p>
+                        <p>&copy; Radiant Utilities</p>
+                        <button class="button" onclick="window.open('https://discord.gg/vfE9qb8V9f', '_blank')"><span></span>SUPPORT</button>
+                        <button class="button" onclick="document.location='mailto:olle1.grahn2@gmail.com'"><span></span>CONTACT ME</button>
+                </div>
+		</section>
+
+        <section id="about">
+            <div class="banner2">
+
+                <div class="content2">
+              <h1>About Us</h1>
+              <p>We are a group of passionate individuals dedicated to providing the best service to our customers.</p>
+              <button class="button"><span></span>Learn More</button>
+            </div>
+            </div>
+          </section>
+          
+
+		<section id="contact">
+            <div class="banner">
+                <div class="content3">
+                <h1>Copyright</h1>
+                <p>Radiant Utilities developer is the owner of this website.</p>
+                <h5>&copy; Radiant Utilities</h5>
+                </div>
+            </div>
+		</section>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('a[href^="#"]').on('click', function(event) {
+				event.preventDefault();
+				var target = this.hash;
+				var $target = $(target);
+				$('html, body').stop().animate({
+					'scrollTop': $target.offset().top
+				}, 900, 'swing', function() {
+					window.location.hash = target;
+				});
+			});
+		});
+	</script>
+</body>
+</html>
