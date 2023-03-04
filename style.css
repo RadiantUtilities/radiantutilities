@@ -486,3 +486,25 @@ top: 80%;
 top: 170%;
     }
   }
+
+  
+  .form-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  #email-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #16051d;
+    box-shadow: inset 0px 1px 3px rgba(134, 55, 180, 0.993);
+    height: 30px;
+    font-size: 18px;
+    outline-color: #6121c7;
+    color: rgb(255, 255, 255);
+  }

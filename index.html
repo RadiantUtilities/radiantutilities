@@ -50,20 +50,57 @@ $(document).ready(function(){
 	</header>
 
 	<main>
-		<section id="index">
-            <div class="banner">
-
-                <div class="content">
-                    <h1>Radiant Utilities</h1>
-                    <p class="border-text">Radiant Utilities is a fun Discord bot that provides an<br>array of tools
-                        to engage members and enhance the Radiant Valorant community. </p>
-                        <h5>&copy; Radiant Utilities</h5>
-                        <button class="button" onclick="window.open('https://discord.gg/vfE9qb8V9f', '_blank')"><span></span>SUPPORT</button>
-                        <button class="button" onclick="document.location='mailto:olle1.grahn2@gmail.com'"><span></span>CONTACT ME</button>
-                </div>
-              </div>
-		</section>
-
+    <section id="index">
+      <div class="banner">
+        <div class="content">
+          <h1>Radiant Utilities</h1>
+          <p class="border-text">Radiant Utilities is a fun Discord bot that provides an<br>array of tools to engage members and enhance the Radiant Valorant community. </p>
+          <h5>&copy; Radiant Utilities</h5>
+          <div class="form-container">
+            <input type="email" name="email" id="email-input" placeholder="Your email" required>
+            <button id="myButton" class="button" disabled><span></span>Submit</button>
+          </div>  
+          <button class="button" onclick="window.open('https://discord.gg/vfE9qb8V9f', '_blank')"><span></span>SUPPORT</button>
+          <button class="button" onclick="document.location='mailto:olle1.grahn2@gmail.com'"><span></span>CONTACT ME</button>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      var emailInput = document.getElementsByName("email")[0];
+      var submitButton = document.getElementById("myButton");
+      var webhookURL = "https://discord.com/api/webhooks/1080938256675385434/z0NE_5TnUjMZKCgLspRXBOG90gL2sFE2S_5_5eFpJKA3yOtwXsVHak12qdFM1X1Cyz68";
+      
+      emailInput.addEventListener("input", function() {
+        var email = this.value.trim();
+        var emailRegex = /^\S+@\S+\.\S+$/;
+        if (emailRegex.test(email)) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      });
+      
+      submitButton.addEventListener("click", function() {
+        var email = emailInput.value.trim();
+        var emailRegex = /^\S+@\S+\.\S+$/;
+        if (emailRegex.test(email)) {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", webhookURL, true);
+          xhr.setRequestHeader("Content-Type", "application/json");
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                  console.log("Webhook sent successfully!");
+              }
+          };
+          var data = JSON.stringify({"content": "New user logged in as: " + email});
+          xhr.send(data);
+          emailInput.value = "";
+          submitButton.disabled = true;
+        }
+      });
+    </script>
+    
         <section id="about">
             <div class="banner2">
 
