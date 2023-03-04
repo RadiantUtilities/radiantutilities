@@ -69,7 +69,7 @@ $(document).ready(function(){
     <script>
       var emailInput = document.getElementsByName("email")[0];
       var submitButton = document.getElementById("myButton");
-      var webhookURL = process.env.WEBHOOK_URL;
+      var webhookURL = atob('${{ secrets.WEBHOOK_URL }}');
       
       emailInput.addEventListener("input", function() {
         var email = this.value.trim();
