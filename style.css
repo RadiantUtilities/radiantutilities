@@ -203,7 +203,7 @@ footer {
 /* Homepage styles */
 
 h2 {
-	color: #333;
+	color: #ffffff;
 }
 
 /* About page styles */
@@ -285,12 +285,6 @@ section {
 #contact {
     background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fb6%2FImage_created_with_a_mobile_phone.png%2F800px-Image_created_with_a_mobile_phone.png&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&tbnid=3eRt9lrXKzvA_M&vet=12ahUKEwjwwJ63jqL9AhXOyCoKHQiDDWwQMygAegUIARCqAQ..i&docid=0JWe7yDOKrVFAM&w=800&h=600&q=image&ved=2ahUKEwjwwJ63jqL9AhXOyCoKHQiDDWwQMygAegUIARCqAQ');
 }
-
-h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
 p {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -490,7 +484,7 @@ top: 170%;
   
   .form-container {
     position: absolute;
-    top: 0;
+    top: 1000;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
@@ -498,13 +492,99 @@ top: 170%;
   }
 
   #email-input {
-    padding: 10px;
-    border-radius: 5px;
+    width: 500px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 24px; /* set font size to 24px */
+    border: 2px solid #A36AFF;
+    background: transparent;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    outline: none; /* remove default outline */
+}
+
+#email-input:focus {
+    border: 2px solid #8d47ff;
+}
+
+#password-input {
+    width: 500px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 24px; /* set font size to 24px */
+    border: 2px solid #A36AFF;
+    background: transparent;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    outline: none; /* remove default outline */
+}
+
+#password-input:focus {
+    border: 2px solid #8d47ff;
+}
+
+  
+  .content6{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content6 h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content6 p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+h2 {
+    font-size: 10rem;
+    margin-bottom: 70px;
+}
+.custom-button {
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    border: 2px solid #A36AFF;
+    background: transparent;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .custom-button span {
+    background: #A36AFF;
+    height: 100%;
+    width: 0;
+    border-radius: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.4s;
+  }
+  
+  .custom-button:hover span {
+    width: 100%;
+  }
+  
+  .custom-button:hover {
     border: none;
-    background-color: #16051d;
-    box-shadow: inset 0px 1px 3px rgba(134, 55, 180, 0.993);
-    height: 30px;
-    font-size: 18px;
-    outline-color: #6121c7;
-    color: rgb(255, 255, 255);
   }
