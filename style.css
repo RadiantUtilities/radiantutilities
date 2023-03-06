@@ -699,7 +699,6 @@ font-size: 110px;
     position: absolute; /* position the logo absolutely within the parent element */
     top: 20%; /* adjust the top position as needed */
     left: 20%; /* adjust the left position as needed */
-    z-index: 999; /* set the z-index to bring the logo to the foreground */
   }
 
   @media only screen and (max-width: 1230px) {
@@ -709,7 +708,6 @@ font-size: 110px;
         top: 38%; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -720,7 +718,6 @@ font-size: 110px;
         top: 34.5%; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -730,7 +727,6 @@ font-size: 110px;
     top: 38%; /* adjust the top position as needed */
     left: 50%; /* set the left position to center the logo horizontally */
     transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-    z-index: 999; /* set the z-index to bring the logo to the foreground */
   }
 
   @media only screen and (min-width: 801px) {
@@ -746,7 +742,6 @@ font-size: 110px;
         top: 100px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 @media only screen and (max-width: 600px) {
@@ -756,7 +751,6 @@ font-size: 110px;
         top: 70px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -767,7 +761,6 @@ font-size: 110px;
         top: 70px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -777,8 +770,6 @@ font-size: 110px;
         position: absolute; /* position the logo absolutely within the parent element */
         top: 80px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
-        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -790,7 +781,6 @@ font-size: 110px;
     top: 38%; /* adjust the top position as needed */
     left: 50%; /* set the left position to center the logo horizontally */
     transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-    z-index: 999; /* set the z-index to bring the logo to the foreground */
   }
 
   @media only screen and (min-width: 801px) {
@@ -806,7 +796,6 @@ font-size: 110px;
         top: 120px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 @media only screen and (max-width: 600px) {
@@ -816,7 +805,6 @@ font-size: 110px;
         top: 100px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -827,7 +815,6 @@ font-size: 110px;
         top: 100px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -838,7 +825,6 @@ font-size: 110px;
         top: 85px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -849,7 +835,6 @@ font-size: 110px;
         top: 100px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
 
@@ -860,6 +845,5 @@ font-size: 110px;
         top: 90px; /* adjust the top position as needed */
         left: 50%; /* set the left position to center the logo horizontally */
         transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
-        z-index: 999; /* set the z-index to bring the logo to the foreground */
     }
 }
