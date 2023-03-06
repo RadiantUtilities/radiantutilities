@@ -714,20 +714,13 @@ font-size: 110px;
 }
 
 .logo3 {
-    max-width: 100px; /* set the maximum width of the logo */
+    max-width: 300px; /* set the maximum width of the logo */
     position: absolute; /* position the logo absolutely within the parent element */
-    top: 38%; /* adjust the top position as needed */
-    left: 50%; /* set the left position to center the logo horizontally */
-    transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+    top: 20%; /* adjust the top position as needed */
+    left: 5%; /* adjust the left position as needed */
   }
-
-  @media only screen and (min-width: 801px) {
-    .logo3 {
-      display: none;
-    }
-  }
-
-@media only screen and (max-width: 800px) {
+  
+@media only screen and (max-width: 1580px) {
     .logo3 {
         display: none;
     }
@@ -800,3 +793,4 @@ font-size: 110px;
         display: none;
     }
 }
+/*I WANT TO ADD THE LOGO AT THE FIRST SECTION AT THE HOME.HTML
