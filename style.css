@@ -48,12 +48,12 @@
     left: 80px;
   }
   
-  /* Media query for smaller screens */
   @media only screen and (max-width: 800px) {
     .logo {
-display: none;
+        display: none;
     }
-  }
+}
+
   .navbar ul {
     list-style: none;
     margin: 0;
@@ -681,3 +681,185 @@ font-size: 110px;
     top: 63.4%;
     transform: translateY(-50%);
   }
+
+  @media only screen and (max-width: 800px) {
+    #password-counter {
+        display: inline-block;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        margin-left: 190px;
+        position: absolute;
+        top: 61.8%;
+        transform: translateY(-50%);
+    }
+}
+.logo2 {
+    max-width: 200px; /* set the maximum width of the logo */
+    position: absolute; /* position the logo absolutely within the parent element */
+    top: 20%; /* adjust the top position as needed */
+    left: 20%; /* adjust the left position as needed */
+    z-index: 999; /* set the z-index to bring the logo to the foreground */
+  }
+
+  @media only screen and (max-width: 1230px) {
+    .logo2 {
+        max-width: 100px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 38%; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .logo2 {
+        max-width: 100px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 34.5%; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+.logo3 {
+    max-width: 100px; /* set the maximum width of the logo */
+    position: absolute; /* position the logo absolutely within the parent element */
+    top: 38%; /* adjust the top position as needed */
+    left: 50%; /* set the left position to center the logo horizontally */
+    transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+    z-index: 999; /* set the z-index to bring the logo to the foreground */
+  }
+
+  @media only screen and (min-width: 801px) {
+    .logo3 {
+      display: none;
+    }
+  }
+
+@media only screen and (max-width: 800px) {
+    .logo3 {
+        max-width: 300px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 100px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+@media only screen and (max-width: 600px) {
+    .logo3 {
+        max-width: 300px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 70px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    .logo3 {
+        max-width: 250px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 70px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    .logo3 {
+        max-width: 200px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 80px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+
+
+.logo4 {
+    max-width: 100px; /* set the maximum width of the logo */
+    position: absolute; /* position the logo absolutely within the parent element */
+    top: 38%; /* adjust the top position as needed */
+    left: 50%; /* set the left position to center the logo horizontally */
+    transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+    z-index: 999; /* set the z-index to bring the logo to the foreground */
+  }
+
+  @media only screen and (min-width: 801px) {
+    .logo4 {
+      display: none;
+    }
+  }
+
+@media only screen and (max-width: 800px) {
+    .logo4 {
+        max-width: 300px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 120px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+@media only screen and (max-width: 600px) {
+    .logo4 {
+        max-width: 300px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 100px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    .logo4 {
+        max-width: 250px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 100px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    .logo4 {
+        max-width: 250px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 85px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+@media only screen and (max-width: 382px) {
+    .logo4 {
+        max-width: 200px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 100px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .logo4 {
+        max-width: 180px; /* set the maximum width of the logo */
+        position: absolute; /* position the logo absolutely within the parent element */
+        top: 90px; /* adjust the top position as needed */
+        left: 50%; /* set the left position to center the logo horizontally */
+        transform: translateX(-50%); /* translate the logo horizontally by negative 50% of its width */
+        z-index: 999; /* set the z-index to bring the logo to the foreground */
+    }
+}

