@@ -697,7 +697,7 @@ font-size: 110px;
 .logo2 {
     max-width: 300px; /* set the maximum width of the logo */
     position: absolute; /* position the logo absolutely within the parent element */
-    top: 20%; /* adjust the top position as needed */
+    top: 10%; /* adjust the top position as needed */
     left: 5%; /* adjust the left position as needed */
   }
 
