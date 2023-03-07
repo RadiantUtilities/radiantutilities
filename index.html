@@ -42,8 +42,10 @@
           <h6 id="email-validation"></h6>
         </div>
         <span id="email-counter">0</span>
-        <input type="password" name="password" id="password-input" placeholder="Enter your password" required maxlength="50" class="input-counter">
-        <h4 id="password-counter" style="display: none;">0/50</h4>
+        <div style="position: relative;">
+          <input type="password" name="password" id="password-input" placeholder="Enter your password" required maxlength="50" class="input-counter">
+          <h4 id="password-counter" style="display: none;">0/50</h4>
+        </div>
         <button id="myButton" class="custom-button" onclick="showLoadingScreen(); setTimeout(function() { location.replace('home.html'); hideLoadingScreen(); }, 1000)">Login</button>
 
         <div id="loadingScreen" class="loading-screen" style="display: none;">
